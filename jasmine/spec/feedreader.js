@@ -84,7 +84,7 @@ $(function() {
         let initFeed;
         beforeEach(function(done){
             loadFeed(0, function() {
-                initFeed = $('.feed').innerHTML;
+                initFeed = document.querySelector('.feed').innerHTML;
                 loadFeed(1, function(){
                     done(); 
                 });
@@ -92,7 +92,7 @@ $(function() {
         });
 
         it('Loaded content', function (done) {
-            let newFeedSelection = $('.feed').innerHTML;
+            let newFeedSelection = document.querySelector('.feed').innerHTML;
             expect(initFeed).not.toBe(newFeedSelection);
             done();
         });
