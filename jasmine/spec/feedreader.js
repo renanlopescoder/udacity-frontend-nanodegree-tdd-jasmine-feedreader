@@ -66,12 +66,16 @@ $(function() {
          * Test to check how the menu button works
          */
         
-        it('menu button', function () {
-            let menuIcon = $('.menu-icon-link');
+        let menuIcon = $('.menu-icon-link');
 
+        it('icon menu button hiding the menu', function () {
             menuIcon.click();
             expect(body.hasClass('menu-hidden')).toBe(false);
+            menuIcon.click();
+        });
 
+        it('icon menu button showing the menu', function () {
+            menuIcon.click();
             menuIcon.click();
             expect(body.hasClass('menu-hidden')).toBe(true);
         });
