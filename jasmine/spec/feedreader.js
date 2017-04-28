@@ -63,22 +63,17 @@ $(function() {
         });
 
         /**
-         * Test to check how the menu button works
+         * Test to check the toggle menu button
          */
-        
-        let menuIcon = $('.menu-icon-link');
 
-        it('icon menu button hiding the menu', function () {
+        it('menu button should toggle the menu visibility', function () {
+            let menuIcon = $('.menu-icon-link');
             menuIcon.click();
             expect(body.hasClass('menu-hidden')).toBe(false);
             menuIcon.click();
-        });
-
-        it('icon menu button showing the menu', function () {
-            menuIcon.click();
-            menuIcon.click();
             expect(body.hasClass('menu-hidden')).toBe(true);
         });
+
     });
 
     /**
